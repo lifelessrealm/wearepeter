@@ -1,0 +1,7 @@
+{
+  "name": "fiatless-site",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-config.mjs"
+  }
+}

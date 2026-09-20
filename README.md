@@ -1,6 +1,21 @@
-# WE ARE PETER
+# FIATLESS
 
-A scroll-driven, single-viewport landing page for the $PETER memecoin concept.
+A scroll-driven, single-viewport landing page for the $FIATLESS memecoin concept.
+
+## Launch configuration
+
+1. Copy `.env.example` to `.env`.
+2. Add the token address:
+
+   ```env
+   CONTRACT_ADDRESS=YOUR_SOLANA_CONTRACT_ADDRESS
+   ```
+
+3. Run `npm run build`.
+
+The build writes the address into `dist/config.js` and automatically links the **Buy $FIATLESS** button to `https://pump.fun/coin/YOUR_SOLANA_CONTRACT_ADDRESS`.
+
+`PUMPFUN_URL` is an optional override if Pump.fun gives you a different launch URL. The site stays safely in “Launching soon” mode when no address is configured.
 
 ## Preview locally
 
@@ -10,9 +25,10 @@ Serve the `dist` directory with any static file server. The experience responds 
 
 - `dist/index.html` — content and accessible scene structure
 - `dist/style.css` — responsive art direction and transitions
-- `dist/app.js` — scene navigation behavior
+- `dist/app.js` — scene navigation and launch-button behavior
+- `dist/config.js` — generated public launch configuration
 - `dist/assets/` — Peter Schiff campaign imagery
 
 ## Important
 
-The copy currently uses placeholder launch language because no contract address or official social links were provided. Replace those details before launch.
+The contract address is public blockchain information. Never place private keys, wallet seeds, or API secrets in `.env` or `dist/config.js`.

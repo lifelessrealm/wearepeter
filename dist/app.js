@@ -3,9 +3,26 @@
   const dots = [...document.querySelectorAll('.scene-dot')];
   const labels = ['01 / MANIFESTO', '02 / THE THESIS', '03 / GOLD REWARDS', '04 / THE ENDGAME'];
   const label = document.querySelector('#sceneLabel');
+  const contractLabel = document.querySelector('#contractAddress');
+  const buyButton = document.querySelector('#buyButton');
+  const config = window.__FIATLESS_CONFIG__ || {};
   let current = 0;
   let locked = false;
   let touchY = null;
+
+  if (config.contractAddress) {
+    const contractAddress = String(config.contractAddress).trim();
+    const pumpfunUrl = config.pumpfunUrl || `https://pump.fun/coin/${encodeURIComponent(contractAddress)}`;
+    contractLabel.textContent = contractAddress;
+    contractLabel.title = contractAddress;
+    buyButton.href = pumpfunUrl;
+    buyButton.target = '_blank';
+    buyButton.rel = 'noopener noreferrer';
+    buyButton.classList.remove('is-disabled');
+    buyButton.removeAttribute('aria-disabled');
+  } else {
+    buyButton.addEventListener('click', (event) => event.preventDefault());
+  }
 
   function showScene(next) {
     const target = Math.max(0, Math.min(scenes.length - 1, next));
