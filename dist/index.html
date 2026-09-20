@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <meta name="description" content="$PETER is the gold-paired memecoin built for believers in hard money, loud memes, and GOLD rewards." />
+    <title>WE ARE PETER — The Gold-Paired Memecoin</title>
+    <link rel="preload" as="image" href="./assets/peter-banner.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="gold-glow gold-glow--one" aria-hidden="true"></div>
+    <div class="gold-glow gold-glow--two" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#scene-1" data-goto="0" aria-label="We Are Peter home">
+        <span class="brand-mark">P</span>
+        <span>WE ARE <b>PETER</b></span>
+      </a>
+      <div class="ticker" aria-label="Token ticker">
+        <span class="status-dot"></span>
+        <span>$PETER / GOLD</span>
+      </div>
+      <button class="menu-button" type="button" data-goto="3">THE PLAN <span aria-hidden="true">↗</span></button>
+    </header>
+
+    <main class="stage" aria-live="polite">
+      <section class="scene scene--hero is-active" id="scene-1" aria-label="Introduction">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="scene-content hero-copy">
+          <p class="eyebrow"><span>01</span> A VERY SERIOUS MEMECOIN</p>
+          <h1><span>WE ARE</span><span>PETER</span><span>SCHIFF</span></h1>
+          <p class="hero-deck">Hard money energy.<br />Internet money speed.</p>
+        </div>
+        <div class="stamp" aria-hidden="true"><span>3%</span><small>GOLD<br />REWARDS</small></div>
+      </section>
+
+      <section class="scene scene--thesis" id="scene-2" aria-label="The thesis" aria-hidden="true">
+        <div class="scene-content split-layout">
+          <div>
+            <p class="eyebrow"><span>02</span> THE THESIS</p>
+            <h2>PAPER<br />MEMES<br /><em>ARE OVER.</em></h2>
+          </div>
+          <div class="manifesto">
+            <div class="rule"></div>
+            <p class="big-copy">A memecoin paired with <strong>gold</strong>—because even the internet deserves a hard asset.</p>
+            <p class="body-copy">$PETER takes the loudest idea in crypto and gives it a glint of something real. Maximum meme. Minimum monetary policy.</p>
+            <div class="quote">“If it isn’t backed by gold, it’s just vibes.” <span>— probably Peter</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--rewards" id="scene-3" aria-label="Holder rewards" aria-hidden="true">
+        <div class="scene-content rewards-layout">
+          <div class="reward-number" aria-hidden="true">3<span>%</span></div>
+          <div class="reward-copy">
+            <p class="eyebrow"><span>03</span> HOLD HARDER</p>
+            <h2>HOLD <span>$PETER.</span><br />EARN <span>GOLD.</span></h2>
+            <p>Holders earn 3% rewards in GOLD stock. Sit back, hold the line, and let the shiny stuff find you.</p>
+            <div class="mini-grid">
+              <div><small>PAIR</small><strong>$PETER / GOLD</strong></div>
+              <div><small>HOLDER REWARDS</small><strong>3% IN GOLD</strong></div>
+              <div><small>VIBE</small><strong>FORT KNOX ONLINE</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--final" id="scene-4" aria-label="Join the gold rush" aria-hidden="true">
+        <div class="portrait-panel" aria-hidden="true"></div>
+        <div class="scene-content final-copy">
+          <p class="eyebrow"><span>04</span> THE GOLDEN ENDGAME</p>
+          <h2>MAKE<br />MEMES<br /><span>SOUND.</span></h2>
+          <p>A tribute to hard money, harder takes, and the man who never stopped saying “buy gold.”</p>
+          <div class="launch-card">
+            <div>
+              <small>CONTRACT ADDRESS</small>
+              <strong>LAUNCHING SOON</strong>
+            </div>
+            <span class="launch-badge">STAY GOLDEN</span>
+          </div>
+          <p class="disclaimer">$PETER is a memecoin. This site is for entertainment only and is not affiliated with Peter Schiff. Nothing here is financial advice.</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="scene-nav" aria-label="Scenes">
+      <button class="scene-dot is-active" type="button" data-goto="0" aria-label="Go to scene 1"><span>01</span></button>
+      <button class="scene-dot" type="button" data-goto="1" aria-label="Go to scene 2"><span>02</span></button>
+      <button class="scene-dot" type="button" data-goto="2" aria-label="Go to scene 3"><span>03</span></button>
+      <button class="scene-dot" type="button" data-goto="3" aria-label="Go to scene 4"><span>04</span></button>
+    </nav>
+
+    <footer class="bottombar">
+      <span class="scroll-hint"><i></i> SCROLL TO GET HEAVIER</span>
+      <span id="sceneLabel">01 / MANIFESTO</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
