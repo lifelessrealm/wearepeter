@@ -32,3 +32,7 @@ Serve the `dist` directory with any static file server. The experience responds 
 ## Important
 
 The contract address is public blockchain information. Never place private keys, wallet seeds, or API secrets in `.env` or `dist/config.js`.
+
+## Vercel
+
+The repository includes `vercel.json`, which runs the configuration build and publishes the `dist` directory. Add `CONTRACT_ADDRESS` in **Vercel → Project Settings → Environment Variables**, then redeploy. `PUMPFUN_URL` remains an optional override.
