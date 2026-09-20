@@ -368,8 +368,15 @@ h1, h2 {
   .ticker { display: none; }
   .scene { padding: 86px 24px 60px; }
   .hero-art, .hero-shade { inset: 68px 0 45px; }
-  .hero-art { background-position: 61% center; }
-  .hero-shade { background: linear-gradient(0deg, rgba(8,8,8,.94), rgba(8,8,8,.08) 78%); }
+  .hero-art {
+    background-position: 62% center;
+    filter: saturate(.95) contrast(1.02) brightness(1.18);
+  }
+  .hero-shade {
+    background:
+      linear-gradient(0deg, rgba(8,8,8,.82) 0%, rgba(8,8,8,.38) 36%, rgba(8,8,8,.06) 78%),
+      linear-gradient(90deg, rgba(8,8,8,.22), transparent 76%);
+  }
   .hero-copy { padding-bottom: 8vh; }
   .hero-copy h1 { font-size: clamp(3.8rem, 21vw, 7rem); }
   .hero-deck { position: static; width: auto; margin: 18px 0 0; }
@@ -385,9 +392,25 @@ h1, h2 {
   .mini-grid div, .mini-grid div + div { padding: 12px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .mini-grid div:last-child { border-bottom: 0; }
   .scene--final { grid-template-columns: 1fr; padding-left: 24px; }
-  .portrait-panel { position: absolute; inset: 68px 0 45px; margin: 0; opacity: .2; background-position: center top; }
+  .portrait-panel {
+    position: absolute;
+    inset: 68px 0 45px;
+    margin: 0;
+    opacity: .58;
+    background:
+      linear-gradient(0deg, rgba(8,8,8,.9) 0%, rgba(8,8,8,.18) 54%, rgba(8,8,8,.18) 100%),
+      url('./assets/peter-square.png') 62% 14% / cover no-repeat;
+    filter: grayscale(.8) contrast(1.08) brightness(1.1);
+  }
+  .final-copy h2, .hero-copy h1 { text-shadow: 0 4px 28px rgba(0,0,0,.55); }
   .final-copy { padding-left: 0; }
   .final-copy h2 { font-size: clamp(3.7rem, 18vw, 6.5rem); }
+  .final-copy > p:not(.eyebrow) { color: #ddd8cd; text-shadow: 0 2px 14px rgba(0,0,0,.95); }
+  .final-copy .disclaimer { color: #aaa59a; }
+  .final-copy .launch-card {
+    background: rgba(8,8,8,.68);
+    backdrop-filter: blur(7px);
+  }
   .scene-nav { right: 12px; }
   .scene-dot { width: 28px; }
   .scene-dot.is-active { width: 38px; }

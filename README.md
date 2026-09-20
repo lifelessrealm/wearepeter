@@ -36,3 +36,5 @@ The contract address is public blockchain information. Never place private keys,
 ## Vercel
 
 The repository includes `vercel.json`, which runs the configuration build and publishes the `dist` directory. Add `CONTRACT_ADDRESS` in **Vercel → Project Settings → Environment Variables**, then redeploy. `PUMPFUN_URL` remains an optional override.
+
+Vercel's production URL is used automatically for the Open Graph and X/Twitter preview image. The shared link preview uses `dist/assets/peter-banner.png`, the 1500×500 **WE ARE PETER SCHIFF** artwork. For another host, set `SITE_URL` to the site's public origin before building.
